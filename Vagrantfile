@@ -45,7 +45,34 @@ Vagrant.configure("2") do |config|
 	echo "export JAVA_HOME=/opt/jdk1.8.0_131" >>/etc/environment
 	echo "export JRE_HOME=/opt/jdk1.8.0_131/jre" >>/etc/environment
 	echo "export PATH=$PATH:/opt/jdk1.8.0_131/bin:/opt/jdk1.8.0_131/jre/bin" >>/etc/environment
-	######
+	
+	###JENKINS install###
+	echo "export JENKINS_HOME=/opt/jenkins/master"
+	echo "export JENKINS_DIR=/opt/jenkins"
+	cd $JENKINS_DIR && wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war -a /var/log/wget.log
+	echo "wget command finished - you may chack /var/log/wget.log for results"
+	#init script#
+	touch /opt/jenkins/jnk-stup.sh
+	echo "java -jar $JENKINS_DIR/jenkins.war > /var/log/jenkins-startup 2> /var/log/jenkins-startup2 &" > /opt/jenkins/jnk-stup.sh
+	chmod +x /opt/jenkins/jnk-stup.sh
+	text = " \\
+[Unit] \\
+Description=Jenkins Server Daemon \\
+Wants=network-online.target \\
+After=network-online.target \\
+ \\
+[Service] \\
+ExecStart=/opt/jenkins/jnk-stup.sh \\
+Restart=always \\
+RestartSec=3 \\
+Type=forking \\
+
+[Install] \\
+WantedBy=multi-user.target"
+	cat $text > /etc/systemd/system/jenkins.service
+	systemctl daemon-reload
+	systemctl enable jenkins.service
+	systemctl start jenkins.service
 	
     SHELL
   end
