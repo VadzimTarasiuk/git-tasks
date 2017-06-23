@@ -1,6 +1,9 @@
 #! /bin/bash
+echo 127.0.0.1 jenkins >> /etc/hosts
 yum install nginx -y
-
+cp /etc/nginx/nginx.conf /home/backup
+awk 'NR==1,/location/{gsub("location / {","location / {\nproxy_pass http://localhost:8080;")}{print}' /etc/nginx/nginx.conf > tmp
+mv -uf tmp /etc/nginx/nginx.conf
 echo [Unit] > tmp
 echo Description=Nginx start >> tmp
 echo After=network.target remote-fs.target nss-lookup.target >> tmp
