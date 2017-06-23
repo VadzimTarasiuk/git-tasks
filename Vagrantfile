@@ -25,6 +25,7 @@ Vagrant.configure("2") do |config|
 
 	###NGINX configuring###
 	cd /etc/nginx
+	rm -rf nginx.conf
 	wget https://github.com/MNT-Lab/git-tasks/blob/yshchanouski-vtarasiuk/nginx.conf -a /var/log/wget.log
 	cd /etc/nginx/conf.d
 	wget https://github.com/MNT-Lab/git-tasks/blob/yshchanouski-vtarasiuk/server.conf -a /var/log/wget.log
