@@ -8,3 +8,6 @@
 ###### c) JENKINS_HOME=/opt/jenkins/master
 ###### d) JENKINS_DIR=/opt/jenkins/bin  ( <- .war is here)
 ###### e) Closed by Nginx and available by link http://jenkins
+![alt text][logo]
+
+[logo]:https://github.com/MNT-Lab/git-tasks/blob/akarzhou-hpashuto/index.jpg "Logo Title diagram"
