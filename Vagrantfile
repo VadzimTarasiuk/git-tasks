@@ -21,4 +21,5 @@ config.vm.provision "shell", inline: <<-SHELL
 
 SHELL
 end
+  end
 end
