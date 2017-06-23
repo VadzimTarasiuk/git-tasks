@@ -27,5 +27,5 @@ Customize readmefile
 
 ## Usefull commands
 
-*git checkou -b "branchname"*
+*git checkou -b "branchname"* After all work *merge branches and push it*
 *git log --graph*
