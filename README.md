@@ -7,6 +7,7 @@ Setup Jenkins
 
 ## Daniil
 
+Manage work
 Setup nginx
 Customize readmefile
 
