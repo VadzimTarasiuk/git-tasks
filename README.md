@@ -5,4 +5,15 @@
 *Creating branch*
 *Test synchronization"
 
+## Work with vagrand 
+
+*Sync folders for files*
+*Check avialability of vagrant up*
+
 ## Redacting README.md file
+
+*Add usefull part*
+
+## Usefull commands
+
+*git checkou -b "branchname"*
