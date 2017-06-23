@@ -1,6 +1,8 @@
 # git-tasks
 
-## Point1
+## Work with git 
 
-*do something*
-*test do 2*
+*Creating branch*
+*Test synchronization"
+
+## Redacting README.md file
