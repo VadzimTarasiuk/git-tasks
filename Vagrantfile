@@ -23,8 +23,13 @@ Vagrant.configure("2") do |config|
 	yum install net-tools nginx -y
 	systemctl enable nginx
 
-##TO:DO wget conf for nginx##
-	
+	###NGINX configuring###
+	cd /etc/nginx
+	wget https://github.com/MNT-Lab/git-tasks/blob/yshchanouski-vtarasiuk/nginx.conf -a /var/log/wget.log
+	cd /etc/nginx/conf.d
+	wget https://github.com/MNT-Lab/git-tasks/blob/yshchanouski-vtarasiuk/server.conf -a /var/log/wget.log
+	systemctl start nginx	
+
 	###JAVA install ###
 	cd /opt/
 	wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz" -a /var/log/wget.log
