@@ -19,5 +19,6 @@ end
 
 jenkins.vm.post_up_message = "jenkins vm is loaded"
 jenkins.vm.provision "file", source: "~/Documents/vagrant/jenkins.war", destination: "jenkins.war"
+jenkins.vm.provision "file", source: "~/Documents/vagrant/java.tar.gz", destination: "java.tar.gz"
 
 end
