@@ -1,9 +1,19 @@
-# git-tasks
+# Executed work
+
+## Aleksei
+
+Customize init Vagrantfile
+Setup Jenkins
+
+## Daniil
+
+Setup nginx
+Customize readmefile
 
 ## Work with git 
 
 *Creating branch*
-*Test synchronization"
+*Test synchronization*
 
 ## Work with vagrand 
 
