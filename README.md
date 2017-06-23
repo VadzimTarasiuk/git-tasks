@@ -17,3 +17,4 @@
 ## Usefull commands
 
 *git checkou -b "branchname"*
+*git log --graph*
