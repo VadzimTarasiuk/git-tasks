@@ -9,6 +9,7 @@
 
 *Sync folders for files*
 *Check avialability of vagrant up*
+*Added filelinks"  
 
 ## Redacting README.md file
 
