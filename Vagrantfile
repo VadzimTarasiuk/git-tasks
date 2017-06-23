@@ -29,4 +29,3 @@ echo jenkins | passwd jenkins --stdin
  SHELL
 end
 end
-end
