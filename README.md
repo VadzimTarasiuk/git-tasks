@@ -2,4 +2,4 @@
 
 ## Point1
 
-*sdlkfjg*
+The new great stuff will be here soon!
