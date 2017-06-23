@@ -1,3 +1,5 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
 Vagrant.configure("2") do |config|
   config.vm.define "jenkins" do |jenkins|
     jenkins.vm.box = "jenkins"
@@ -16,10 +18,15 @@ config.vm.provision "shell", inline: <<-SHELL
 
 
 #---Jenkins----
+mkdir /opt/jenkins
+mkdir /opt/jenkins/bin
+cp /vagrant/jenkins.war /opt/jenkins/bin/jenkins.war
+groupadd jenkins
+useradd -g jenkins -c "jenkins user" jenkins
+echo jenkins | passwd jenkins --stdin
 
 
-
-SHELL
+ SHELL
 end
-  end
+end
 end
